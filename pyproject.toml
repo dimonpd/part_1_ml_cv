@@ -1,39 +1,43 @@
-[tool.poetry]
-name = "stepik"
+[project]
+name = "part_1_ml_cv"
 version = "0.1.0"
-description = ""
-authors = ["Your Name <your.email@example.com>"]
+description = "Materials for Deep Learning School course (ML + CV)"
+authors = [
+    {name = "Deep Learning School", email = "info@dls.samcs.ru"},
+]
 readme = "README.md"
-package-mode = false
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=1.16.0,<2.0",
+    "pandas>=2.0.0",
+    "scikit-learn>=1.6.1",
+    "catboost>=1.2.7",
+    "optuna>=4.2.0",
+    "matplotlib>=3.5.0",
+    "polars>=1.21.0",
+    "nbformat>=5.9.2",
+    "plotly>=5.19.0",
+    "ipywidgets>=8.1.1",
+    "jupyter>=1.0.0",
+    "opencv-python>=4.11.0.86",
+    "python-dotenv>=1.0.1",
+    "fastexcel>=0.12.1",
+    "psycopg>=3.2.4",
+    "xmltodict>=0.14.2",
+    "pyarrow>=19.0.0",
+    "seaborn>=0.13.2",
+    "gdown>=5.2.0",
+    "torch>=2.6.0",
+    "torchvision>=0.21.0",
+]
 
-[tool.poetry.dependencies]
-python = ">=3.12"
-numpy = ">=1.16.0,<2.0"
-pandas = "^2.0.0"
-scikit-learn = "^1.6.1"
-catboost = "^1.2.7"
-optuna = "^4.2.0"
-matplotlib = "^3.5.0"
-polars = "^1.21.0" # Понижаем версию
-
-nbformat = "^5.9.2"  # Добавляем nbformat
-plotly = "^5.19.0"   # Добавляем plotly
-ipywidgets = "^8.1.1" # Для интерактивных виджетов
-jupyter = "^1.0.0"    # Для работы с Jupyter notebooks
- 
-opencv-python = "^4.11.0.86"
-python-dotenv = "^1.0.1"
-fastexcel = "^0.12.1"
-psycopg = "^3.2.4"
-xmltodict = "^0.14.2"
-pyarrow = "^19.0.0"
-seaborn = "^0.13.2"
-gdown = "^5.2.0"
-
-
-[tool.poetry.group.dev.dependencies]
-ipykernel = "^6.29.5"
+[project.optional-dependencies]
+dev = [
+    "ipykernel>=6.29.5",
+]
+[tool.hatch.build.targets.wheel]
+packages = ["part_1_ml_cv"]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"

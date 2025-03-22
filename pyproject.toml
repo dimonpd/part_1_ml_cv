@@ -29,6 +29,7 @@ dependencies = [
     "gdown>=5.2.0",
     "torch>=2.6.0",
     "torchvision>=0.21.0",
+    "torchsummary>=1.5.1",
 ]
 
 [project.optional-dependencies]

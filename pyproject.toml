@@ -31,6 +31,7 @@ dependencies = [
     "torchvision>=0.21.0",
     "torchsummary>=1.5.1",
     "google>=3.0.0",
+    "scikit-image>=0.25.2",
 ]
 
 [project.optional-dependencies]

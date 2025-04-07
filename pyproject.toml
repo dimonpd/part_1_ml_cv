@@ -30,6 +30,7 @@ dependencies = [
     "torch>=2.6.0",
     "torchvision>=0.21.0",
     "torchsummary>=1.5.1",
+    "google>=3.0.0",
 ]
 
 [project.optional-dependencies]
